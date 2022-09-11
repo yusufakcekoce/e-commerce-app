@@ -14,7 +14,9 @@ function Header() {
         <li>Anasayfa</li>
         <li>Mağaza</li>
         <li>Hakkımızda</li>
-        <li><MdOutlineShoppingBasket /></li>
+        <li>
+          <MdOutlineShoppingBasket />
+        </li>
       </ul>
     </section>
   );
