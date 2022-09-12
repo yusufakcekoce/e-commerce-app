@@ -14,22 +14,33 @@ body {
   box-sizing: border-box;
 }
 
-.topNav {
+.top-nav {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   background-color: #00baf0;
   background: #fff;
-  box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
   color: #000;
   height: 100px;
   padding: 1em;
   font-family: "Saira Condensed", sans-serif;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
   font-size: 20px;
-  .logo {
-    font-size: 25px;
-  }
+}
+
+.logo {
+  font-size: 25px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  transition: all 0.3s ease-in-out;
+  color: #006fff;
 }
 
 .menu {
@@ -38,7 +49,6 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  cursor: pointer;
 }
 
 .menu > li {
@@ -46,12 +56,7 @@ body {
   overflow: hidden;
 }
 
-.menu li:hover {
-  transition: all 0.3s ease-in-out;
-  color: #006fff;
-}
-
-.menuButtonContainer {
+.menu-button-container {
   display: none;
   height: 100%;
   width: 30px;
@@ -61,13 +66,13 @@ body {
   align-items: center;
 }
 
-#menuToggle {
+#menu-toggle {
   display: none;
 }
 
-.menuButton,
-.menuButton::before,
-.menuButton::after {
+.menu-button,
+.menu-button::before,
+.menu-button::after {
   display: block;
   background-color: #000;
   position: absolute;
@@ -77,56 +82,62 @@ body {
   border-radius: 2px;
 }
 
-.menuButton::before {
+.menu-button::before {
   content: "";
   margin-top: -8px;
 }
 
-.menuButton::after {
+.menu-button::after {
   content: "";
   margin-top: 8px;
 }
 
-#menuToggle:checked + .menuButtonContainer .menuButton::before {
+#menu-toggle:checked + .menu-button-container .menu-button::before {
   margin-top: 0px;
   transform: rotate(405deg);
 }
 
-#menuToggle:checked + .menuButtonContainer .menuButton {
+#menu-toggle:checked + .menu-button-container .menu-button {
   background: rgba(255, 255, 255, 0);
 }
 
-#menuToggle:checked + .menuButtonContainer .menuButton::after {
+#menu-toggle:checked + .menu-button-container .menu-button::after {
   margin-top: 0px;
   transform: rotate(-405deg);
 }
 
 @media (max-width: 720px) {
-  .menuButtonContainer {
+  .menu-button-container {
     display: flex;
   }
   .menu {
     position: absolute;
     top: 0;
-    margin-top: 50px;
+    margin-top: 100px;
     left: 0;
     flex-direction: column;
     width: 100%;
     justify-content: center;
     align-items: center;
   }
-  #menuToggle ~ .menu li {
+  #menu-toggle ~ .menu li {
     height: 0;
     margin: 0;
     padding: 0;
     border: 0;
     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
   }
-  #menuToggle:checked ~ .menu li {
-    border: 1px solid #333;
+  #menu-toggle:checked ~ .menu li {
+    border: none;
     height: 2.5em;
     padding: 0.5em;
     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  a {
+    color: #fff;
+  }
+  a:hover {
+    color: rgb(255, 255, 0);
   }
   .menu > li {
     display: flex;
@@ -135,7 +146,7 @@ body {
     padding: 0.5em 0;
     width: 100%;
     color: white;
-    background-color: #222;
+    background-color: #006fff;
   }
   .menu > li:not(:last-child) {
     border-bottom: 1px solid #444;

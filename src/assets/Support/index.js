@@ -11,23 +11,25 @@ function Support() {
       <ul className={styles.supUl}>
         <li>
           <BsTruck />
-          <p>Evlere Servis</p>
-          <p className={styles.bottom}>İzmir'in her bölgesine ücretsiz kargo</p>
+          <p>Delivery by Cargo</p>
+          <p className={styles.bottom}>
+            Free shipping to all regions of Turkey
+          </p>
         </li>
         <li>
           <CgArrowsExchangeAlt />
-          <p>İade Hakkı</p>
-          <p className={styles.bottom}>Koşulsuz şartsız iade imkanı</p>
+          <p>Right of Return</p>
+          <p className={styles.bottom}>Unconditional return opportunity</p>
         </li>
         <li>
           <BsHeadset />
-          <p>Destek Hattı</p>
-          <p className={styles.bottom}>7/24 iletişim imkanı</p>
+          <p>Support Line</p>
+          <p className={styles.bottom}>7/24 communication opportunity</p>
         </li>
         <li>
           <BsCash />
-          <p>Ödeme Çeşitliliği</p>
-          <p className={styles.bottom}>İster online ister kapıda öde</p>
+          <p>Payment Variety</p>
+          <p className={styles.bottom}>By card, cash, and soon by phone</p>
           <p></p>
         </li>
       </ul>

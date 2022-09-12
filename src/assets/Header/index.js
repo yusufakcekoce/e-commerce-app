@@ -1,21 +1,33 @@
 import React from "react";
-import styles from "./style.module.scss";
 import { MdOutlineShoppingBasket } from "react-icons/md";
+import { Link } from "react-router-dom";
+import Logo from "../../img/logo.png"
 
+import "./style.css";
 function Header() {
   return (
-    <section class={styles.topNav}>
-      <div className={styles.logo}>KARDEŞLER BALIKÇILIK</div>
-      <input id={styles.menuToggle} type="checkbox" />
-      <label class={styles.menuButtonContainer} for="menu-toggle">
-        <div class={styles.menuButton}></div>
+    <section class="top-nav">
+      <div className="logo">
+        <img src={Logo} alt="" width="225px"/>
+      </div>
+      <input id="menu-toggle" type="checkbox" />
+      <label class="menu-button-container" for="menu-toggle">
+        <div class="menu-button"></div>
       </label>
-      <ul class={styles.menu}>
-        <li>Anasayfa</li>
-        <li>Mağaza</li>
-        <li>Hakkımızda</li>
+      <ul class="menu">
         <li>
-          <MdOutlineShoppingBasket />
+          <Link to={"/"}>Home</Link>
+        </li>
+        <li>
+          <Link to={"/shop"}>Shop</Link>
+        </li>
+        <li>
+          <Link to={"/about"}>About Us</Link>
+        </li>
+        <li>
+          <Link to={"/"}>
+            <MdOutlineShoppingBasket />
+          </Link>
         </li>
       </ul>
     </section>

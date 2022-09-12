@@ -1,72 +1,82 @@
-.row:first-child {
-    margin-bottom: 100px;
+.context:first-child {
+  margin-bottom: 100px;
 }
 
 .title {
-    text-align: center;
-    text-decoration: uppercase;
-    letter-spacing: 3px;
+  text-align: center;
+  text-decoration: uppercase;
+  letter-spacing: 3px;
 }
 
-.row:nth-child(2) {
-    display: flex;
+.context:nth-child(2) {
+  display: flex;
 }
 
-.row:nth-child(2) .col {
-    padding: 0 15px;
-
+.context:nth-child(2) .col {
+  padding: 0 15px;
 }
 
-.row:nth-child(2) .col:first-child {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+.context:nth-child(2) .col:first-child {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .btn {
-    margin-bottom: 15px;
-    background-color:transparent;
-    border-color: transparent;
-    outline: none;
-    border: none;
-    width: max-content;
-    text-transform: uppercase;
-    cursor: pointer;
-    font-size: 20px;
+  margin-bottom: 15px;
+  background-color: transparent;
+  border-color: transparent;
+  outline: none;
+  border: none;
+  width: max-content;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 20px;
 }
 
 .btn:hover {
-    transition: all 0.5s ease-out;
-    color: #006fff;
+  transition: all 0.5s ease-out;
+  color: #006fff;
 }
 
-.row:nth-child(2) .col:last-child {
-    flex:3;
+.context:nth-child(2) .col:last-child {
+  flex: 3;
 }
 
 .cards {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .card {
-    width: 250px;
-    box-shadow: 0 0 10px #000;
-    border-radius: 5px;
-    padding: 5px;
-    margin: 10px;
+  width: 250px;
+  box-shadow: 0 0 10px #000;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px;
 }
 
 .cardHeader img {
-    width: 100%;
+  width: 100%;
 }
 
 .titleProduct {
-    text-align: center;
+  text-align: center;
 }
 
 .price {
-    display: flex;
-    justify-content: center;
-    margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.basket {
+  border: none;
+  outline: none;
+  width: 50%;
+  height: 2.5rem;
+  background-color: #006fff;
+  color: #FFF;
+  border-radius: 5px;
+  cursor: pointer;
 }
