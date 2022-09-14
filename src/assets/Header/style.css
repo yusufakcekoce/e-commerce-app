@@ -39,6 +39,10 @@ a:hover {
   color: #006fff;
 }
 
+.menu li {
+  cursor: pointer;
+}
+
 a:focus {
   color: #006fff;
 }

@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { MdOutlineShoppingBasket } from "react-icons/md";
 import { Link } from "react-router-dom";
+import Profile from "../../components/Profile";
 import Logo from "../../img/logo.png";
 
 import "./style.css";
 function Header() {
+
   return (
     <section className="top-nav">
       <div className="logo">
@@ -30,6 +32,9 @@ function Header() {
           <Link to={"/finish"}>
             <MdOutlineShoppingBasket />
           </Link>
+        </li>
+        <li>
+          <Link to={"/login"}><Profile/></Link>
         </li>
       </ul>
     </section>

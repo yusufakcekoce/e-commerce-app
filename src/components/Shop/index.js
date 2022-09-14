@@ -2,9 +2,24 @@ import React, { useState } from "react";
 import styles from "./style.module.scss";
 import Categories from "./Categories";
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 function Shop() {
   const [data, setData] = useState(Categories);
   const [query, setQuery] = useState("");
+
+  const notify = () => {
+    toast.warn('Please login!', {
+      position: "top-center",
+      autoClose: 2500,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      });
+  }
 
   const filterResult = (catItem) => {
     const result = Categories.filter((curDate) => {
@@ -63,7 +78,10 @@ function Shop() {
                       <div className={styles.cardBody}>
                         <h2 className={styles.titleProduct}>{title}</h2>
                         <span className={styles.price}>${price}</span>
-                        <button className={styles.basket}>ADD TO BASKET</button>
+                        <button className={styles.basket} onClick={notify}>
+                          ADD TO BASKET
+                        </button>
+                        <ToastContainer />
                       </div>
                     </div>
                   </>
