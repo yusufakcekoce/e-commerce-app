@@ -26,10 +26,6 @@ body {
   padding: 1em;
   font-family: "Saira Condensed", sans-serif;
   box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
-  font-size: 20px;
-}
-
-.logo {
   font-size: 25px;
 }
 
@@ -40,6 +36,10 @@ a {
 
 a:hover {
   transition: all 0.3s ease-in-out;
+  color: #006fff;
+}
+
+a:focus {
   color: #006fff;
 }
 
@@ -137,6 +137,9 @@ a:hover {
     color: #fff;
   }
   a:hover {
+    color: rgb(255, 255, 0);
+  }
+  a:focus {
     color: rgb(255, 255, 0);
   }
   .menu > li {

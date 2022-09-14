@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+.aboutContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.logoImg img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.details h2 {
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-top: 3%;
+}
+
+.details h3 {
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 3%;
+    max-width: 800px;
+}
+
