@@ -4,15 +4,15 @@ import Categories from "./Categories";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { UserContext } from "../../UserProvider";
+import { UserContext, UserDispatchContext } from "../../UserProvider";
 
 function Shop() {
+  const userDetails = useContext(UserContext);
+  const setUserDetails = useContext(UserDispatchContext);
   const [data, setData] = useState(Categories);
   const [query, setQuery] = useState("");
 
-  const userDetails = useContext(UserContext);
-
-  const handleAddBasketClick = () => {
+  const handleAddBasketClick = (title, image, price) => {
     if (!userDetails.username) {
       toast.warn("Please login!", {
         position: "top-center",
@@ -24,6 +24,13 @@ function Shop() {
         progress: undefined,
       });
     } else {
+      setUserDetails({
+        ...userDetails,
+        basket: userDetails.basket
+          ? [...userDetails.basket, { title, image, price }]
+          : [{ title, image, price }],
+      });
+      console.log(userDetails);
       toast.success("Added to basket", {
         position: "top-center",
         autoClose: 2500,
@@ -96,7 +103,9 @@ function Shop() {
                         <span className={styles.price}>${price}</span>
                         <button
                           className={styles.basket}
-                          onClick={handleAddBasketClick}
+                          onClick={() =>
+                            handleAddBasketClick(title, image, price)
+                          }
                         >
                           ADD TO BASKET
                         </button>

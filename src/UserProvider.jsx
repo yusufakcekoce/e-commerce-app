@@ -1,10 +1,13 @@
-import { createContext, useState, useEffect } from "react";
+import { createContext, useState} from "react";
 
 const UserContext = createContext(undefined);
 const UserDispatchContext = createContext(undefined);
 
 function UserProvider({ children }) {
-  const [userDetails, setUserDetails] = useState({});
+  const [userDetails, setUserDetails] = useState({
+    username: "",
+    basket: [],
+  });
 
   return (
     <UserContext.Provider value={userDetails}>
