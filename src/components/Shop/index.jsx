@@ -1,26 +1,40 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import styles from "./style.module.scss";
 import Categories from "./Categories";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { UserContext } from "../../UserProvider";
 
 function Shop() {
   const [data, setData] = useState(Categories);
   const [query, setQuery] = useState("");
 
-  const notify = () => {
-    toast.warn('Please login!', {
-      position: "top-center",
-      autoClose: 2500,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      });
-  }
+  const userDetails = useContext(UserContext);
 
+  const handleAddBasketClick = () => {
+    if (!userDetails.username) {
+      toast.warn("Please login!", {
+        position: "top-center",
+        autoClose: 2500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    } else {
+      toast.success("Added to basket", {
+        position: "top-center",
+        autoClose: 2500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    }
+  };
   const filterResult = (catItem) => {
     const result = Categories.filter((curDate) => {
       return curDate.category === catItem;
@@ -42,6 +56,7 @@ function Shop() {
           />
         </div>
       </div>
+
       <div className={styles.context}>
         <div className={styles.col}>
           <button className={styles.btn} onClick={() => setData(Categories)}>
@@ -63,6 +78,7 @@ function Shop() {
             Football
           </button>
         </div>
+
         <div className={styles.col}>
           <div className={styles.cards}>
             {data
@@ -78,7 +94,10 @@ function Shop() {
                       <div className={styles.cardBody}>
                         <h2 className={styles.titleProduct}>{title}</h2>
                         <span className={styles.price}>${price}</span>
-                        <button className={styles.basket} onClick={notify}>
+                        <button
+                          className={styles.basket}
+                          onClick={handleAddBasketClick}
+                        >
                           ADD TO BASKET
                         </button>
                         <ToastContainer />

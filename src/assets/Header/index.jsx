@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { MdOutlineShoppingBasket } from "react-icons/md";
 import { Link } from "react-router-dom";
 import Profile from "../../components/Profile";
-import Logo from "../../img/logo.png";
+import Logo from "../../img/logo2.png";
+import { UserContext } from "../../UserProvider";
 
 import "./style.css";
 function Header() {
-
+  const userDetails = useContext(UserContext);
+  console.log(userDetails);
   return (
     <section className="top-nav">
       <div className="logo">
@@ -34,7 +36,11 @@ function Header() {
           </Link>
         </li>
         <li>
-          <Link to={"/login"}><Profile/></Link>
+          {!userDetails.username ? (
+            <Link to={"/login"}>Login</Link>
+          ) : (
+            <Profile />
+          )}
         </li>
       </ul>
     </section>

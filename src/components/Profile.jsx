@@ -1,13 +1,16 @@
 import { useContext } from "react";
-import { UserContext, UserDispatchContext } from "../UserProvider";
+import { UserContext } from "../UserProvider";
 
 function Profile() {
   const userDetails = useContext(UserContext);
-  
 
   return (
-    <p> {userDetails.username} </p>
-  )
+    <div className="profile">
+      <div className="profile__name">
+        <p>{userDetails.username}</p>
+      </div>
+    </div>
+  );
 }
 
 export default Profile;
