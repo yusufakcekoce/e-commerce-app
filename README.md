@@ -1,9 +1,9 @@
 ## This project was created with react
 
 ### View the project live
-```
-https://shopoftr.netlify.app
-```
+
+> https://shopoftr.netlify.app
+
 
 ### Used in the project;
 
