@@ -1,0 +1,30 @@
+.basket {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.basketItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  max-width: 500px;
+  width: 100%;
+  border: 1px solid #000;
+  padding: 10px;
+}
+
+.completeBtn a {
+  width: 300px;
+  height: 100px;
+  background-color: #006fff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  padding: 10px;
+}

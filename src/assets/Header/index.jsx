@@ -31,7 +31,7 @@ function Header() {
           <Link to={"/about"}>About Us</Link>
         </li>
         <li>
-          <Link to={"/finish"}>
+          <Link to={"/basket"}>
             <MdOutlineShoppingBasket />
           </Link>
         </li>

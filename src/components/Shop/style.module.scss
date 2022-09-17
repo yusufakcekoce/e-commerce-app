@@ -1,3 +1,7 @@
+.shopContainer {
+  margin-top: 3%;
+}
+
 .context:first-child {
   margin-bottom: 100px;
 }
@@ -58,7 +62,7 @@
 }
 
 .cardHeader img {
-  width: 100%;
+  
 }
 
 .titleProduct {
@@ -82,12 +86,13 @@
   cursor: pointer;
 }
 
-input[type="text"] {
+.search input {
   width: 50%;
   outline: none;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
+  text-transform: lowercase;
 }
 
 .btn:focus {

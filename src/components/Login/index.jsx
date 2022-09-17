@@ -1,5 +1,7 @@
 import React, { useContext, useState } from "react";
 import { UserContext, UserDispatchContext } from "../../UserProvider";
+import { Link } from "react-router-dom";
+
 import styles from "./style.module.scss";
 
 function Login() {
@@ -17,20 +19,20 @@ function Login() {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={styles.loginContainer}>
       <div className={styles.context}>
-        <div className={styles.col}>
+        <div className={styles.loginCol}>
           <h1 className="title">LOGIN</h1>
-          <br />
           <input
             type="text"
             placeholder="Username"
             value={value}
             onChange={handleChange}
           />
-          <input type="password" placeholder="Password" required />
-          <br />
-          <button onClick={handleSubmit}>Login</button>
+          <input type="password" placeholder="Password" />
+          <div className={styles.btnButton}>
+            <button onClick={handleSubmit}>Login</button>
+          </div>
         </div>
       </div>
     </div>

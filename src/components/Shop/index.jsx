@@ -50,15 +50,12 @@ function Shop() {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={styles.shopContainer}>
       <div className={styles.context}>
-        <div className={styles.col}>
-          <h1 className="title">SHOP</h1>
-          <br />
-
+        <div className={styles.search}>
           <input
             type="text"
-            placeholder="Write the name of the product you want..."
+            placeholder="Enter product name"
             onChange={(e) => setQuery(e.target.value)}
           />
         </div>
@@ -96,7 +93,7 @@ function Shop() {
                   <>
                     <div className={styles.card} key={id}>
                       <div className={styles.cardHeader}>
-                        <img src={image} alt={title} />
+                        <img src={image} alt={title} height={"300px"} />
                       </div>
                       <div className={styles.cardBody}>
                         <h2 className={styles.titleProduct}>{title}</h2>
