@@ -3,7 +3,6 @@ import { UserContext } from "../../UserProvider";
 import { Link } from "react-router-dom";
 
 import EmptyBasket from "../../img/vectors/basket.png";
-
 import styles from "./style.module.scss";
 
 function Basket() {
@@ -15,10 +14,15 @@ function Basket() {
         <div className={styles.emptyBasket}>
           <img src={EmptyBasket} alt="" width="300px" />
           <h1>Your basket is empty</h1>
+          <p>Please login and add items to your cart</p>
           <Link to={"/shop"}>
             <button>Shop Now</button>
           </Link>
-          <p>Please login and add items to your cart</p>
+          <div className={styles.way}>
+            <Link to={"/login"}>
+              <p className={styles.wayP}>Go Login</p>
+            </Link>
+          </div>
         </div>
       ) : (
         <div className={styles.bsktContainer}>

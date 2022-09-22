@@ -120,6 +120,9 @@ a:focus {
   .menu a {
     color: #fff;
   }
+  .menu a:hover {
+    color: rgb(243, 181, 25);
+  }
   .menu {
     position: absolute;
     top: 0;

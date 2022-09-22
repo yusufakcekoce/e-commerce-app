@@ -20,21 +20,29 @@ function Login() {
 
   return (
     <div className={styles.loginContainer}>
-      <div className={styles.context}>
-        <div className={styles.loginCol}>
-          <h1 className="title">LOGIN</h1>
-          <input
-            type="text"
-            placeholder="Username"
-            value={value}
-            onChange={handleChange}
-          />
-          <input type="password" placeholder="Password" required />
-          <div className={styles.btnButton}>
-            <button onClick={handleSubmit}>Login</button>
-          </div>
+      <form onSubmit={handleSubmit}>
+        <label>
+          Username:
+          <input type="text" value={value} onChange={handleChange} required />
+        </label>
+        <label>
+          Password:
+          <input type="password" required />
+        </label>
+        <div className={styles.sbmtButton}>
+          {userDetails.username ? (
+            <div className={styles.way}>
+              <input type="submit" value="Submit" />
+
+              <Link to={"/shop"}>
+                <p className={styles.wayP}>Go Shop</p>
+              </Link>
+            </div>
+          ) : (
+            <input type="submit" value="Submit" />
+          )}
         </div>
-      </div>
+      </form>
     </div>
   );
 }

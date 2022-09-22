@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import styles from "./style.module.scss";
 import Categories from "./Categories";
+import { BsFillCaretDownFill } from "react-icons/bs";
 
 // icons
 import { FaShoppingCart } from "react-icons/fa";
@@ -10,9 +11,11 @@ import { AiFillStar } from "react-icons/ai";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { UserContext, UserDispatchContext } from "../../UserProvider";
-import DropDown from "../__delete__";
 
 function Shop() {
+  const [isOpen, setOpen] = useState(false);
+  const [selected, setSelected] = useState("Choose One");
+
   const userDetails = useContext(UserContext);
   const setUserDetails = useContext(UserDispatchContext);
   const [data, setData] = useState(Categories);
@@ -57,48 +60,68 @@ function Shop() {
 
   return (
     <>
-      {/* <div className={styles.context}>
-        <div className={styles.col}>
-          <button className={styles.btn} onClick={() => setData(Categories)}>
-            All
-          </button>
-          <button className={styles.btn} onClick={() => filterResult("Men")}>
-            Men
-          </button>
-          <button className={styles.btn} onClick={() => filterResult("Women")}>
-            Women
-          </button>
-          <button className={styles.btn} onClick={() => filterResult("Kids")}>
-            Kids
-          </button>
-          <button
-            className={styles.btn}
-            onClick={() => filterResult("Sport")}
-          >
-            Football
-          </button>
-        </div>
-      </div> */}
       <div className={styles.search}>
-      <div className={styles.wrapper}>
-        <div className={styles.searchBox}>
-            <div className={styles.dropdown}>
-                <div className={styles.defaultOption}>All</div>
-                <ul>
-                    <li>All</li>
-                    <li>Men</li>
-                    <li>Women</li>
-                    <li>Kids</li>
-                    <li>Sport</li>
-                </ul>
+        <div className={styles.dropdown}>
+          <div className={styles.dropdownBtn} onClick={(e) => setOpen(!isOpen)}>
+            {selected}{" "}
+            <i>
+              <BsFillCaretDownFill />
+            </i>
+          </div>
+          {isOpen && (
+            <div
+              className={styles.dropdownContent}
+              onClick={(e) => {
+                setOpen(false);
+                setSelected(e.target.innerText);
+                filterResult(e.target.innerText);
+
+                if (e.target.innerText === "All") {
+                  setData(Categories);
+                }
+              }}
+            >
+              <div
+                className={styles.dropdownItem}
+                onClick={() => setData(Categories)}
+              >
+                All
+              </div>
+              <div
+                className={styles.dropdownItem}
+                onClick={() => filterResult("Men")}
+              >
+                Men
+              </div>
+              <div
+                className={styles.dropdownItem}
+                onClick={() => filterResult("Women")}
+              >
+                Women
+              </div>
+              <div
+                className={styles.dropdownItem}
+                onClick={() => filterResult("Kids")}
+              >
+                Kids
+              </div>
+              <div
+                className={styles.dropdownItem}
+                onClick={() => filterResult("Sport")}
+              >
+                Sport
+              </div>
             </div>
-            <div className={styles.searchField}>
-                <input type="text" className={styles.input} placeholder='Search...' 
-                onChange={(e) => setQuery(e.target.value)}/>
-            </div>
+          )}
         </div>
-    </div>
-        
+        <div className={styles.searchField}>
+          <input
+            type="text"
+            className={styles.input}
+            placeholder="Search..."
+            onChange={(e) => setQuery(e.target.value)}
+          />
+        </div>
       </div>
       <div className={styles.proContainer}>
         <div className={styles.products}>
