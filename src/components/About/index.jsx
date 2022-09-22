@@ -1,13 +1,14 @@
 import React from "react";
 // import styles from "./style.module.scss"
 import styles from "./style.module.scss";
-import Logo from "../../img/logo2.png";
+import Logo from "../../img/logo.png";
 import Vector1 from "../../img/vectors/vector1.png";
-// import Vector2 from "../../img/vectors/vector2.png";
+import DropDown from "../__delete__";
 
 function About() {
   return (
     <div className={styles.aboutContainer}>
+      <DropDown/>
       <div className="logoImg">
         <img src={Logo} alt="" width="400px" />
       </div>

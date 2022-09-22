@@ -2,6 +2,11 @@ import React, { useContext, useState } from "react";
 import styles from "./style.module.scss";
 import Categories from "./Categories";
 
+// icons
+import { FaShoppingCart } from "react-icons/fa";
+import { AiFillStar } from "react-icons/ai";
+
+// toastify
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { UserContext, UserDispatchContext } from "../../UserProvider";
@@ -50,17 +55,7 @@ function Shop() {
   };
 
   return (
-    <div className={styles.shopContainer}>
-      <div className={styles.context}>
-        <div className={styles.search}>
-          <input
-            type="text"
-            placeholder="Enter product name"
-            onChange={(e) => setQuery(e.target.value)}
-          />
-        </div>
-      </div>
-
+    <>
       <div className={styles.context}>
         <div className={styles.col}>
           <button className={styles.btn} onClick={() => setData(Categories)}>
@@ -82,40 +77,60 @@ function Shop() {
             Football
           </button>
         </div>
-
-        <div className={styles.col}>
-          <div className={styles.cards}>
-            {data
-              .filter((values) => values.title.toLowerCase().includes(query))
-              .map((values) => {
-                const { id, title, price, image } = values;
-                return (
-                  <>
-                    <div className={styles.card} key={id}>
-                      <div className={styles.cardHeader}>
-                        <img src={image} alt={title} height={"300px"} />
-                      </div>
-                      <div className={styles.cardBody}>
-                        <h2 className={styles.titleProduct}>{title}</h2>
-                        <span className={styles.price}>${price}</span>
-                        <button
-                          className={styles.basket}
-                          onClick={() =>
-                            handleAddBasketClick(title, image, price)
-                          }
-                        >
-                          ADD TO BASKET
-                        </button>
-                        <ToastContainer />
-                      </div>
+      </div>
+      <div className={styles.search}>
+        <input
+          type="text"
+          placeholder="Search..."
+          onChange={(e) => setQuery(e.target.value)}
+        />
+      </div>
+      <div className={styles.proContainer}>
+        <div className={styles.products}>
+          {data
+            .filter((values) => values.title.toLowerCase().includes(query))
+            .map((values) => {
+              const { id, title, price, image, brand } = values;
+              return (
+                <div className={styles.card} key={id}>
+                  <img src={image} alt="" />
+                  <div className={styles.des}>
+                    <span className={styles.brand}>{brand}</span>
+                    <h5>{title}</h5>
+                    <div className={styles.star}>
+                      <i>
+                        <AiFillStar />
+                      </i>
+                      <i>
+                        <AiFillStar />
+                      </i>
+                      <i>
+                        <AiFillStar />
+                      </i>
+                      <i>
+                        <AiFillStar />
+                      </i>
+                      <i>
+                        <AiFillStar />
+                      </i>
                     </div>
-                  </>
-                );
-              })}
-          </div>
+                    <h4>${price}</h4>
+                  </div>
+                  <div className={styles.add}>
+                    <button
+                      className={styles.btnAdd}
+                      onClick={() => handleAddBasketClick(title, image, price)}
+                    >
+                      <FaShoppingCart />
+                    </button>
+                    <ToastContainer />
+                  </div>
+                </div>
+              );
+            })}
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

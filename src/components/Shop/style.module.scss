@@ -1,100 +1,117 @@
-.shopContainer {
-  margin-top: 3%;
-}
-
-.context:first-child {
-  margin-bottom: 100px;
-}
-
-.title {
-  text-align: center;
-  text-decoration: uppercase;
-  letter-spacing: 3px;
-}
-
-.context:nth-child(2) {
-  display: flex;
-}
-
-.context:nth-child(2) .col {
-  padding: 0 15px;
-}
-
-.context:nth-child(2) .col:first-child {
-  flex: 1;
+.proContainer {
+  margin-top: 2%;
   display: flex;
   flex-direction: column;
-}
-
-.btn {
-  margin-bottom: 15px;
-  background-color: transparent;
-  border-color: transparent;
-  outline: none;
-  border: none;
-  width: max-content;
-  text-transform: uppercase;
-  cursor: pointer;
-  font-size: 20px;
-}
-
-.btn:hover {
-  transition: all 0.5s ease-out;
-  color: #006fff;
-}
-
-.context:nth-child(2) .col:last-child {
-  flex: 3;
-}
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.card {
-  width: 250px;
-  box-shadow: 0 0 10px #000;
-  border-radius: 5px;
-  padding: 5px;
-  margin: 10px;
-  font-family:Arial, Helvetica, sans-serif;
-}
-
-.cardHeader img {
-  
-}
-
-.titleProduct {
-  text-align: center;
-}
-
-.price {
-  display: flex;
   justify-content: center;
-  margin: 10px 0;
-}
+  align-items: center;
+  
+  .products {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1300px;
+  }
+  .card {
+    width: 13%;
+    width: 250px;
+    height: 470px;
+    padding: 10px 12px;
+    border: 1px solid rgb(189, 177, 177);
+    border-radius: 25px;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    margin: 15px 10PX;
+    transition: 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+  }
 
-.basket {
-  border: none;
-  outline: none;
-  width: 50%;
-  height: 2.5rem;
-  background-color: #006fff;
-  color: #fff;
-  border-radius: 5px;
-  cursor: pointer;
-}
+  .card:hover {
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.2);
+  }
 
+  .card img {
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  .card .des {
+    text-align: start;
+    padding: 8px 0;
+  }
+
+  .card .des span {
+    color: #606063;
+    font-size: 12px;
+    cursor: pointer;
+  }
+
+  .card .des h5 {
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 14px;
+  }
+
+  .card .des i {
+    font-size: 15px;
+    color: rgb(243, 181, 25);
+  }
+
+  .card .des h4 {
+    padding-top: 7px;
+    color: #006fff;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .card .add {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: #006fff;
+    font-weight: 500;
+    border: 1px solid #013375;
+    position: relative;
+    bottom: 35px;
+    left: 180px;
+  }
+
+  .card .add button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .brand:hover {
+    border-bottom: 1px solid #606063;
+  }
+
+}
 .search input {
-  width: 50%;
+  width: 25%;
   outline: none;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
-  text-transform: lowercase;
+  margin: 0 auto;
+  margin-top: 1%;
+  margin-bottom: 1%;
 }
 
-.btn:focus {
-  color: #006fff;
+.context .btn{
+  display: flex;
+  flex-direction: row;
+  border: none;
+  outline: none;
+  width:100px;
+  margin: 5px;
+  padding: 5px;
+  font-size: 25px;
+  cursor: pointer;
+  background-color:#006fff ;
+  color: #fff;
 }

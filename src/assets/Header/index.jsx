@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { MdOutlineShoppingBasket } from "react-icons/md";
 import { Link } from "react-router-dom";
 import Profile from "../../components/Profile";
-import Logo from "../../img/logo2.png";
+import Logo from "../../img/logo.png";
 import { UserContext } from "../../UserProvider";
 
 import "./style.css";

@@ -31,10 +31,13 @@ body {
 
 a {
   text-decoration: none;
+}
+
+.menu a {
   color: #000;
 }
 
-a:hover {
+.menu a:hover {
   transition: all 0.3s ease-in-out;
   color: #006fff;
 }
@@ -114,6 +117,9 @@ a:focus {
   .menu-button-container {
     display: flex;
   }
+  .menu a {
+    color: #fff;
+  }
   .menu {
     position: absolute;
     top: 0;
@@ -141,10 +147,10 @@ a:focus {
     color: #fff;
   }
   a:hover {
-    color: rgb(255, 255, 0);
+    color: rgb(243, 181, 25);
   }
   a:focus {
-    color: rgb(255, 255, 0);
+    color: rgb(243, 181, 25);
   }
   .menu > li {
     display: flex;

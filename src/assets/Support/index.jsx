@@ -29,7 +29,7 @@ function Support() {
         <li>
           <BsCash />
           <p>Payment Variety</p>
-          <p className={styles.bottom}>By card, cash, and soon by phone</p>
+          <p className={styles.bottom}>Buy card, cash, and soon by phone</p>
           <p></p>
         </li>
       </ul>

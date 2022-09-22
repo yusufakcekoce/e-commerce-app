@@ -29,7 +29,7 @@ function Login() {
             value={value}
             onChange={handleChange}
           />
-          <input type="password" placeholder="Password" />
+          <input type="password" placeholder="Password" required />
           <div className={styles.btnButton}>
             <button onClick={handleSubmit}>Login</button>
           </div>
