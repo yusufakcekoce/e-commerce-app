@@ -8,7 +8,7 @@ import DropDown from "../__delete__";
 function About() {
   return (
     <div className={styles.aboutContainer}>
-      <DropDown/>
+      {/* <DropDown/> */}
       <div className="logoImg">
         <img src={Logo} alt="" width="400px" />
       </div>

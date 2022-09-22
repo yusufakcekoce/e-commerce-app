@@ -47,7 +47,7 @@ const Categories = [
   },
   {
     id: 5,
-    category: "Football",
+    category: "Sport",
     title: "Nike Mercurial",
     price: 50,
     image: `${Shoes}`,
@@ -55,7 +55,7 @@ const Categories = [
   },
   {
     id: 6,
-    category: "Football",
+    category: "Sport",
     title: "Fenerbahçe Jersey",
     price: 100,
     image: `${Kit}`,

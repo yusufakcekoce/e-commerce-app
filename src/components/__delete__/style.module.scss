@@ -15,11 +15,13 @@
   display: flex;
   padding: 10px;
   box-shadow: 0 8px 6px -10px #b3c6ff;
+  display: flex;
+  justify-content: center;
 }
 
 .wrapper .searchBox .dropdown {
   width: 150px;
-  border-right: 2px solid #dde2f1;
+  
   color: #9fa3b1;
   position: relative;
   cursor: pointer;

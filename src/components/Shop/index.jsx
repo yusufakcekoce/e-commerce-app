@@ -10,6 +10,7 @@ import { AiFillStar } from "react-icons/ai";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { UserContext, UserDispatchContext } from "../../UserProvider";
+import DropDown from "../__delete__";
 
 function Shop() {
   const userDetails = useContext(UserContext);
@@ -56,7 +57,7 @@ function Shop() {
 
   return (
     <>
-      <div className={styles.context}>
+      {/* <div className={styles.context}>
         <div className={styles.col}>
           <button className={styles.btn} onClick={() => setData(Categories)}>
             All
@@ -72,18 +73,32 @@ function Shop() {
           </button>
           <button
             className={styles.btn}
-            onClick={() => filterResult("Football")}
+            onClick={() => filterResult("Sport")}
           >
             Football
           </button>
         </div>
-      </div>
+      </div> */}
       <div className={styles.search}>
-        <input
-          type="text"
-          placeholder="Search..."
-          onChange={(e) => setQuery(e.target.value)}
-        />
+      <div className={styles.wrapper}>
+        <div className={styles.searchBox}>
+            <div className={styles.dropdown}>
+                <div className={styles.defaultOption}>All</div>
+                <ul>
+                    <li>All</li>
+                    <li>Men</li>
+                    <li>Women</li>
+                    <li>Kids</li>
+                    <li>Sport</li>
+                </ul>
+            </div>
+            <div className={styles.searchField}>
+                <input type="text" className={styles.input} placeholder='Search...' 
+                onChange={(e) => setQuery(e.target.value)}/>
+            </div>
+        </div>
+    </div>
+        
       </div>
       <div className={styles.proContainer}>
         <div className={styles.products}>
