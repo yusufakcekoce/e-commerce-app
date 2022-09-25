@@ -32,14 +32,14 @@ function Login() {
         <div className={styles.sbmtButton}>
           {userDetails.username ? (
             <div className={styles.way}>
-              <input type="submit" value="Submit" />
+              <input type="submit" value="Login" />
 
               <Link to={"/shop"}>
                 <p className={styles.wayP}>Go Shop</p>
               </Link>
             </div>
           ) : (
-            <input type="submit" value="Submit" />
+            <input type="submit" value="Login" />
           )}
         </div>
       </form>

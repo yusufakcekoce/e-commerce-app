@@ -25,7 +25,7 @@ function Shop() {
     if (!userDetails.username) {
       toast.warn("Please login!", {
         position: "top-center",
-        autoClose: 2500,
+        autoClose: 2000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -42,7 +42,7 @@ function Shop() {
       console.log(userDetails);
       toast.success("Added to basket", {
         position: "top-center",
-        autoClose: 2500,
+        autoClose: 2000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
