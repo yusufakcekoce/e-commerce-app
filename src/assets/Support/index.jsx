@@ -1,9 +1,11 @@
 import React from "react";
+import styles from "./style.module.scss";
+
+//images
 import { CgArrowsExchangeAlt } from "react-icons/cg";
 import { BsTruck } from "react-icons/bs";
 import { BsHeadset } from "react-icons/bs";
 import { BsCash } from "react-icons/bs";
-import styles from "./style.module.scss";
 
 function Support() {
   return (

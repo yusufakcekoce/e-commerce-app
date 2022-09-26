@@ -3,14 +3,13 @@ import Men2 from "../../img/products/men2.jpg";
 import Men3 from "../../img/products/men3.jpg";
 import Men4 from "../../img/products/men4.jpg";
 
-
 import Women from "../../img/products/women.jpg";
 import Women2 from "../../img/products/women2.jpg";
 import Women3 from "../../img/products/women3.jpg";
 
 import Kids from "../../img/products/kids.jpg";
-import Shoes from "../../img/products/shoes.jpg"
-import Kit from "../../img/products/kit.jpg"
+import Shoes from "../../img/products/shoes.jpg";
+import Kit from "../../img/products/kit.jpg";
 
 const Categories = [
   {

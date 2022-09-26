@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./style.module.scss";
 
+//images
 import Tick from "../../img/vectors/tick.png";
 
 function Finish() {

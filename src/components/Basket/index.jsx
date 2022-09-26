@@ -7,19 +7,19 @@ import styles from "./style.module.scss";
 
 function Basket() {
   const userDetails = useContext(UserContext);
-  const [quantity, setQuantity] = useState(1);
 
   return (
     <div>
       {!userDetails.basket?.[0] ? (
         <div className={styles.emptyBasket}>
           <img src={EmptyBasket} alt="" width="300px" />
-          <h1>Your basket is empty</h1>
-          <p>Please login and add items to your cart</p>
-          <Link to={"/shop"}>
-            <button>Shop Now</button>
-          </Link>
-          <div className={styles.way}></div>
+          <div className={styles.emptyBasketText}>
+            <h1>Your basket is empty</h1>
+            <p>Please login and add items to your cart</p>
+            <Link to={"/shop"}>
+              <p className={styles.wayP}>Go Shop</p>
+            </Link>
+          </div>
         </div>
       ) : (
         <div className={styles.bsktContainer}>

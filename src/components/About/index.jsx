@@ -1,6 +1,7 @@
 import React from "react";
-
 import styles from "./style.module.scss";
+
+//images
 import Logo from "../../img/logo.png";
 import Vector1 from "../../img/vectors/vector1.png";
 

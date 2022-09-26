@@ -1,9 +1,9 @@
 import React, { useContext, useState } from "react";
 import styles from "./style.module.scss";
 import Categories from "./Categories";
-import { BsFillCaretDownFill } from "react-icons/bs";
 
 // icons
+import { BsFillCaretDownFill } from "react-icons/bs";
 import { FaShoppingCart } from "react-icons/fa";
 import { AiFillStar } from "react-icons/ai";
 
@@ -39,7 +39,6 @@ function Shop() {
           ? [...userDetails.basket, { title, image, price }]
           : [{ title, image, price }],
       });
-      console.log(userDetails);
       toast.success("Added to basket", {
         position: "top-center",
         autoClose: 2000,
