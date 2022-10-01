@@ -34,7 +34,7 @@ function Login() {
               type="text"
               value={value}
               onChange={handleChange}
-              pattern="[A-Za-z]*"
+              pattern="[A-Z a-z]*"
               title="please enter only letter"
               minLength="2"
               maxLength="10"

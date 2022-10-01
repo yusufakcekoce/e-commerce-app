@@ -67,7 +67,7 @@
 }
 
 .completeBtn {
-  margin-top: 1%;
+  margin-top: 3%;
 }
 
 .completeBtn a {
@@ -171,5 +171,9 @@ select {
 
   .basketItemSubtotal {
     margin-top: 5%;
+  }
+
+  .basketHeader {
+    visibility: hidden;
   }
 }

@@ -60,7 +60,9 @@ function Basket() {
                       </select>
                     </div>
                     <div className={styles.basketItemSubtotal}>
-                      <p><b>${subtotal}</b></p>
+                      <p>
+                        <b>${subtotal}</b>
+                      </p>
                     </div>
                   </div>
                 );
@@ -76,6 +78,9 @@ function Basket() {
                 0
               )}{" "}
             </b>
+          </div>
+          <div className={styles.completeBtn}>
+            <Link to={"/finish"}>Complete Order</Link>
           </div>
         </div>
       )}
