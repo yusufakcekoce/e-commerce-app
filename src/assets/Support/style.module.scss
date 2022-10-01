@@ -1,57 +1,40 @@
-.supportContainer {
+.products {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-basis: 300px;
+  flex-wrap: wrap;
+  margin: 40px;
+  padding: 20px;
+}
+
+.cardContainer {
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px -5px;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-bottom: 2.2rem;
+  color: #000;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 100px;
-  flex-wrap: wrap;
-  flex-basis: 300px;
-  font-family: Helvetica, sans-serif;
+  text-align: center;
+}
 
-  .supUl {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: #ffff;
-    box-shadow: 0 10px 30px rgb(0 0 0 / 15%);
-    max-width: 1000px;
-    width: 100%;
-    padding: 50px;
-    margin-top: 1%;
-    font-size: 40px;
-    height: max-content;
-  }
+.cardContent {
+  margin: 1rem;
+  margin-top: 0.5rem;
+}
 
-  .supUl li {
-    padding: 10px;
-    border-right: 1px solid rgb(221, 221, 221);
-  }
+.cardTitle {
+  margin-bottom: 0.5rem;
+}
 
-  .supUl li:last-child {
-    border: none;
-  }
-
-  .supUl .bottom {
-    display: flex;
-    font-size: 15px;
-    color: rgb(177, 176, 176);
-  }
-
-  .supUl p {
-    font-size: 20px;
-    font-weight: 500;
-  }
-
-  @media (max-width: 720px) {
-    .supUl {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .supUl li {
-      border-right: none;
-      border-bottom: 1px solid rgb(221, 221, 221);
-    }
-  }
+.imageContainer {
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

@@ -67,4 +67,14 @@ p.wayP {
 .loginHeader {
   margin-bottom: 73px;
   font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+}
+
+@media (max-width: 720px) {
+  .login {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
 }

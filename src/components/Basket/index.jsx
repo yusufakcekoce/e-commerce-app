@@ -7,6 +7,12 @@ import styles from "./style.module.scss";
 
 function Basket() {
   const userDetails = useContext(UserContext);
+  const [quantity, setQuantity] = useState(1);
+
+  console.log(userDetails);
+  const handleQuantity = (e) => {
+    setQuantity(e.target.value);
+  };
 
   return (
     <div>
@@ -22,32 +28,54 @@ function Basket() {
           </div>
         </div>
       ) : (
-        <div className={styles.bsktContainer}>
-          <div className={styles.bsktContext}>
-            <div className={styles.bsktCol}>
-              <div className={styles.basket}>
-                {userDetails.basket &&
-                  userDetails.basket.map((item, index) => {
-                    return (
-                      <div className={styles.basketItem} key={index}>
-                        <img
-                          src={item.image}
-                          alt={item.title}
-                          className={styles.itemImg}
-                          width="120px"
-                        />
-                        <div className={styles.basketItemInfo}>
-                          <h3>{item.title}</h3>
-                          <p>${item.price}</p>
-                        </div>
-                      </div>
-                    );
-                  })}
-              </div>
-            </div>
-            <div className={styles.completeBtn}>
-              <Link to={"/finish"}>Complete Order</Link>
-            </div>
+        <div className={styles.basketContainer}>
+          <div className={styles.basketHeader}>
+            <ul>
+              <li>Product</li>
+              <li>Quantity</li>
+              <li>Subtotal</li>
+            </ul>
+          </div>
+          <div className={styles.basketItems}>
+            {userDetails.basket &&
+              userDetails.basket.map((item, index) => {
+                const subtotal = item.price * quantity;
+                return (
+                  <div className={styles.basketItem} key={index}>
+                    <div className={styles.basketItemImg}>
+                      <img src={item.image} alt="" width="100px" />
+                      <p className={styles.itemP}>{item.title}</p>
+                      <p className={styles.itemP}>${item.price}</p>
+                    </div>
+
+                    <div className={styles.basketItemQuantity}>
+                      <select
+                        name="quantity"
+                        id="quantity"
+                        onChange={handleQuantity}
+                      >
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                      </select>
+                    </div>
+                    <div className={styles.basketItemSubtotal}>
+                      <p><b>${subtotal}</b></p>
+                    </div>
+                  </div>
+                );
+              })}
+          </div>
+          <div className={styles.basketTotal}>
+            Total ={" "}
+            <b>
+              {" "}
+              $
+              {userDetails.basket.reduce(
+                (acc, item) => acc + item.price * quantity,
+                0
+              )}{" "}
+            </b>
           </div>
         </div>
       )}

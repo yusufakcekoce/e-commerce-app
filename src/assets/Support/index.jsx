@@ -9,32 +9,70 @@ import { BsCash } from "react-icons/bs";
 
 function Support() {
   return (
-    <div className={styles.supportContainer}>
-      <ul className={styles.supUl}>
-        <li>
+    <div className={styles.products}>
+        <div className={styles.cardContainer}>
+          <div className={styles.cardContent}>
+            <div className={styles.cardTitle}>
+              <h3>Delivery by Cargo</h3>
+            </div>
+            <div className={styles.cardBody}>
+              <p>
+              Free shipping to all regions of Turkey
+              </p>
+            </div>
+          </div>
+          <div className={styles.imageContainer}>
           <BsTruck />
-          <p>Delivery by Cargo</p>
-          <p className={styles.bottom}>
-            Free shipping to all regions of Turkey
-          </p>
-        </li>
-        <li>
+          </div>
+        </div>
+
+        <div className={styles.cardContainer}>
+          <div className={styles.cardContent}>
+            <div className={styles.cardTitle}>
+              <h3>Right of Return</h3>
+            </div>
+            <div className={styles.cardBody}>
+              <p>
+              Unconditional return opportunity
+              </p>
+            </div>
+          </div>
+          <div className={styles.imageContainer}>
           <CgArrowsExchangeAlt />
-          <p>Right of Return</p>
-          <p className={styles.bottom}>Unconditional return opportunity</p>
-        </li>
-        <li>
+          </div>
+        </div>
+        
+        <div className={styles.cardContainer}>
+          <div className={styles.cardContent}>
+            <div className={styles.cardTitle}>
+              <h3>Support Line</h3>
+            </div>
+            <div className={styles.cardBody}>
+              <p>
+              7/24 communication opportunity
+              </p>
+            </div>
+          </div>
+          <div className={styles.imageContainer}>
           <BsHeadset />
-          <p>Support Line</p>
-          <p className={styles.bottom}>7/24 communication opportunity</p>
-        </li>
-        <li>
+          </div>
+        </div>
+        
+        <div className={styles.cardContainer}>
+          <div className={styles.cardContent}>
+            <div className={styles.cardTitle}>
+              <h3>Payment Variety</h3>
+            </div>
+            <div className={styles.cardBody}>
+              <p>
+              Buy card, cash, and soon by phone
+              </p>
+            </div>
+          </div>
+          <div className={styles.imageContainer}>
           <BsCash />
-          <p>Payment Variety</p>
-          <p className={styles.bottom}>Buy card, cash, and soon by phone</p>
-          <p></p>
-        </li>
-      </ul>
+          </div>
+        </div>
     </div>
   );
 }

@@ -13,6 +13,7 @@ import Kit from "../../img/products/kit.jpg";
 
 const Categories = [
   {
+    basket: [],
     id: 1,
     category: "Men",
     title: "Men Tshirt",
@@ -21,6 +22,7 @@ const Categories = [
     brand: "Puma",
   },
   {
+    basket: [],
     id: 2,
     category: "Men",
     title: "Men Tshirt",
@@ -29,6 +31,7 @@ const Categories = [
     brand: "Adidas",
   },
   {
+    basket: [],
     id: 3,
     category: "Women",
     title: "Women Bag",
@@ -37,6 +40,7 @@ const Categories = [
     brand: "Nike",
   },
   {
+    basket: [],
     id: 4,
     category: "Kids",
     title: "Kids Tshirt",
@@ -45,6 +49,7 @@ const Categories = [
     brand: "LCW",
   },
   {
+    basket: [],
     id: 5,
     category: "Sport",
     title: "Nike Mercurial",
@@ -53,6 +58,7 @@ const Categories = [
     brand: "Nike",
   },
   {
+    basket: [],
     id: 6,
     category: "Sport",
     title: "Fenerbahçe Jersey",
@@ -61,6 +67,7 @@ const Categories = [
     brand: "Puma",
   },
   {
+    basket: [],
     id: 7,
     category: "Men",
     title: "Men Sweatshirt",
@@ -69,6 +76,7 @@ const Categories = [
     brand: "Puma",
   },
   {
+    basket: [],
     id: 8,
     category: "Men",
     title: "Men Tshirt",
@@ -77,6 +85,7 @@ const Categories = [
     brand: "Puma",
   },
   {
+    basket: [],
     id: 9,
     category: "Women",
     title: "Women Tshirt",
@@ -85,6 +94,7 @@ const Categories = [
     brand: "Puma",
   },
   {
+    basket: [],
     id: 10,
     category: "Women",
     title: "Women Tshirt",
