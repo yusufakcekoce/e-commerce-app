@@ -21,10 +21,22 @@ function Basket() {
           <img src={EmptyBasket} alt="" width="300px" />
           <div className={styles.emptyBasketText}>
             <h1>Your basket is empty</h1>
-            <p>Please login and add items to your cart</p>
-            <Link to={"/shop"}>
-              <p className={styles.wayP}>Go Shop</p>
-            </Link>
+            {!userDetails.username ? (
+              <p>
+                Please{" "}
+                <Link to={"/login"} className={styles.logP}>
+                  login
+                </Link>{" "}
+                and add items to your cart
+              </p>
+            ) : (
+              <>
+                <p>Please add items to your cart</p>
+                <Link to={"/shop"}>
+                  <p className={styles.wayP}>Go Shop</p>
+                </Link>
+              </>
+            )}
           </div>
         </div>
       ) : (
